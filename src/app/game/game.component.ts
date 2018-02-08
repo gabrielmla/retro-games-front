@@ -11,11 +11,10 @@ export class GameComponent implements OnInit {
 
   games: any;
 
-  constructor(private _gameService: GameService) {
-    this.games = _gameService.getGames();
-   }
+  constructor(private _gameService: GameService) { }
 
   ngOnInit() {
+    this.games = this._gameService.getGames();
   }
 
 }

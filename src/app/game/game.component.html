@@ -1,4 +1,5 @@
-<p>
-  {{ games }}
-  game works!
-</p>
+<div class="collection">
+    <a class="collection-item" *ngFor="let game of games" [routerLink]="[ '/game', game.id ]">
+        {{ game.name }}
+    </a>
+</div>

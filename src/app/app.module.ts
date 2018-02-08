@@ -6,16 +6,21 @@ import { MaterializeModule } from 'angular2-materialize';
 import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { GameModule } from './game/game.module';
-
+import { AboutComponent } from './about/about.component';
+import { routing } from './app.routing';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AboutComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     MaterializeModule,
-    GameModule
+    GameModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
