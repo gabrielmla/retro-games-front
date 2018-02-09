@@ -1,10 +1,18 @@
-<div class="collection">
+<!--<div class="collection">
     <a class="collection-item" *ngFor="let game of games" [routerLink]="[ '/game', game.id ]">
         {{ game.name }}
     </a>
-</div>
+</div>-->
 
-<ul class="collapsible" data-collapsible="accordion">
+<head>
+    <script>
+        $(document).ready(function(){
+            $('.collapsible').collapsible();
+        });
+    </script>
+</head>
+
+<ul class="collapsible" data-collapsible="accordion" #collapse>
     <li *ngFor="let game of games">
         <div class="collapsible-header">
             <i class="material-icons">filter_drama</i> {{ game.name }}
@@ -12,7 +20,10 @@
         <div class="collapsible-body">
             <span>{{ game.description }}</span>
             <p>
-                <a id="collapsible-button-body" class="waves-effect waves-light btn">button</a>
+                <a id="collapsible-button-body" class="waves-effect waves-light btn indigo lighten-1">
+                    <i class="material-icons right">videogame_asset</i>
+                    button
+                </a>
             </p>
         </div>
     </li>
@@ -20,24 +31,26 @@
 
 <ul class="pagination">
     <li class="disabled">
-        <a href="#!"><i class="material-icons">chevron_left</i></a>
+        <a (click)="prevPage"><i class="material-icons">chevron_left</i></a>
     </li>
-    <li class="active">
+    <li class="waves-effect" routerLink="active">
         <a href="#!">1</a>
     </li>
-    <li class="waves-effect">
-        <a href="#!">2</a>
+    <li class="waves-effect" routerLink="active">
+        <a>2</a>
+    </li>
+    <li class="waves-effect" routerLink="active">
+        <a>3</a>
+    </li>
+    <li class="waves-effect" routerLink="active">
+        <a>4</a>
+    </li>
+    <li class="waves-effect" routerLink="active">
+        <a>5</a>
     </li>
     <li class="waves-effect">
-        <a href="#!">3</a>
-    </li>
-    <li class="waves-effect">
-        <a href="#!">4</a>
-    </li>
-    <li class="waves-effect">
-        <a href="#!">5</a>
-    </li>
-    <li class="waves-effect">
-        <a href="#!"><i class="material-icons">chevron_right</i></a>
+        <a (click)="nesxtPage"><i class="material-icons">chevron_right</i></a>
     </li>
 </ul>
+
+
