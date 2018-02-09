@@ -12,7 +12,7 @@ const APP_ROUTES: Routes = [
     { path: '', component: HomeComponent },
     { path: 'games', component: GameComponent },
     { path: 'game/:id', component: GameDetailComponent},
-    { path: 'game/notfound', component: GameNotFoundComponent },
+    { path: 'notfound', component: GameNotFoundComponent },
     { path: 'about', component: AboutComponent }
 ];
 

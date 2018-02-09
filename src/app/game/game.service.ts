@@ -20,7 +20,27 @@ export class GameService {
       release_date: '1990-11-21',
       rating: 100,
       cover: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/32/Super_Mario_World_Coverart.png/220px-Super_Mario_World_Coverart.png',
-      images: [] }
+      images: [] },
+    {
+      id: 3,
+      name: 'Fill',
+      description: 'sdoiugfaposifdjsadjaslkdj'
+    },
+    {
+      id: 4,
+      name: 'Fill',
+      description: 'sdoiugfaposifdjsadjaslkdj'
+    },
+    {
+      id: 5,
+      name: 'Fill',
+      description: 'sdoiugfaposifdjsadjaslkdj'
+    },
+    {
+      id: 6,
+      name: 'Fill',
+      description: 'sdoiugfaposifdjsadjaslkdj'
+    }
     ];
 
   constructor() { }

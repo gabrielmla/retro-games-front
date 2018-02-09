@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+
+import { Subscription } from 'rxjs/Subscription';
 
 import { GameService } from './game.service';
 
@@ -10,11 +13,20 @@ import { GameService } from './game.service';
 export class GameComponent implements OnInit {
 
   games: any;
+  page: number;
 
-  constructor(private _gameService: GameService) { }
+  subscription: Subscription;
+
+  constructor(private _gameService: GameService,
+              private router: ActivatedRoute) { }
 
   ngOnInit() {
     this.games = this._gameService.getGames();
+    this.subscription = this.router.queryParams.subscribe(
+      (queryParams: any) => {
+        this.page = queryParams['page'];
+      }
+    );
   }
 
 }
