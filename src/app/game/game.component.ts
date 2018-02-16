@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { Subscription } from 'rxjs/Subscription';
@@ -15,8 +15,6 @@ export class GameComponent implements OnInit, OnDestroy {
   games: any;
   page: number;
 
-  @ViewChild('collapse') collapse: any;
-
   subscription: Subscription;
 
   constructor(private _gameService: GameService,
@@ -24,17 +22,19 @@ export class GameComponent implements OnInit, OnDestroy {
               private router: Router) { }
 
   ngOnInit() {
+    console.log('init');
     this.games = this._gameService.getGames();
     this.subscription = this.route.queryParams.subscribe(
       (queryParams: any) => {
         this.page = queryParams['page'];
       }
     );
+    $('.collapsible').collapsible();
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
-    console.log('ho');
+    console.log('delete');
   }
 
 }
