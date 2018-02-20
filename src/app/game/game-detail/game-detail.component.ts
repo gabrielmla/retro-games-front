@@ -27,6 +27,7 @@ export class GameDetailComponent implements OnInit, OnDestroy {
         }
       }
     );
+    ($('.carousel.carousel-slider') as any).carousel({fullWidth: true});
   }
 
   ngOnDestroy() {

@@ -4,6 +4,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
     /*background-color: #3355bb;*/
+    background-image: url(https://raw.githubusercontent.com/gabrielmla/retro-games-front/master/src/assets/minimal-background.jpg?token=AJ8S2eEuqfWvuHopJ6y40WBHt6dWTChoks5alY1JwA%3D%3D);
   }
 
   main {

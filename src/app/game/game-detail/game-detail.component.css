@@ -1,0 +1,13 @@
+.card.large {
+    height: auto;
+}
+.card.large .card-content {
+    height: auto;
+}
+.card.large .card-action {
+    position: relative;
+}
+
+h6 {
+    padding-top: 7px;
+}

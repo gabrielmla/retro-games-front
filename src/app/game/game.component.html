@@ -9,12 +9,11 @@
         <div class="collapsible-header">
             <i class="material-icons">games</i> {{ game.name }}
         </div>
-        <div class="collapsible-body">
+        <div id="game-col-body" class="collapsible-body">
             <span>{{ game.description }}</span>
             <p>
                 <a id="collapsible-button-body" class="waves-effect waves-light btn indigo lighten-1" [routerLink]="[ game.id ]">
                     <i class="material-icons right">videogame_asset</i>
-                    
                     Details
                 </a>
             </p>
