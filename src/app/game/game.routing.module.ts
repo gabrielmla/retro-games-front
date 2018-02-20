@@ -7,10 +7,9 @@ import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GameNotFoundComponent } from './game-not-found/game-not-found.component';
 
 const gameRoutes: Routes = [
-    { path: 'games', component: GameComponent, children: [
-        { path: ':id', component: GameDetailComponent },
-        { path: 'notfound', component: GameNotFoundComponent }
-    ] }
+    { path: 'games', component: GameComponent},
+    { path: 'games/notfound', component: GameNotFoundComponent },
+    { path: 'games/:id', component: GameDetailComponent }
 ];
 
 @NgModule({
