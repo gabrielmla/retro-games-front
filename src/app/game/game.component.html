@@ -12,8 +12,9 @@
         <div class="collapsible-body">
             <span>{{ game.description }}</span>
             <p>
-                <a id="collapsible-button-body" class="waves-effect waves-light btn indigo lighten-1">
+                <a id="collapsible-button-body" class="waves-effect waves-light btn indigo lighten-1" [routerLink]="[ game.id ]">
                     <i class="material-icons right">videogame_asset</i>
+                    
                     Details
                 </a>
             </p>
@@ -45,4 +46,4 @@
     </li>
 </ul>
 
-
+<router-outlet></router-outlet>

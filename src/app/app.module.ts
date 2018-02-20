@@ -11,8 +11,8 @@ import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
 import { GameModule } from './game/game.module';
 import { AboutComponent } from './about/about.component';
-import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +24,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     MaterializeModule,
     GameModule,
-    routing
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

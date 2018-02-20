@@ -23,7 +23,7 @@ export class GameDetailComponent implements OnInit, OnDestroy {
       (params: any) => {
         this.game = this._gameService.getGame(params['id']);
         if (this.game == null) {
-          this.router.navigate(['game/notfound']);
+          this.router.navigate(['notfound']);
         }
       }
     );

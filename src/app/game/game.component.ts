@@ -29,7 +29,7 @@ export class GameComponent implements OnInit, OnDestroy {
         this.page = queryParams['page'];
       }
     );
-    $('.collapsible').collapsible();
+    ($('.collapsible') as any).collapsible();
   }
 
   ngOnDestroy() {
