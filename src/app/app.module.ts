@@ -2,6 +2,7 @@
 /// <reference path="../../node_modules/@types/jqueryui/index.d.ts" />
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
 
 import { MaterializeModule } from 'angular2-materialize';
 import * as $ from 'jquery';
@@ -22,6 +23,7 @@ import { AppRoutingModule } from './app.routing.module';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     MaterializeModule,
     GameModule,
     AppRoutingModule

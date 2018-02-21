@@ -13,6 +13,7 @@ import { GameService } from './game.service';
 export class GameComponent implements OnInit, OnDestroy {
 
   games: any;
+  gamesApi: any;
   page: number;
 
   subscription: Subscription;
@@ -24,6 +25,7 @@ export class GameComponent implements OnInit, OnDestroy {
   ngOnInit() {
     console.log('init');
     this.games = this._gameService.getGames();
+    this.gamesApi = this._gameService.getGamesApi();
     this.subscription = this.route.queryParams.subscribe(
       (queryParams: any) => {
         this.page = queryParams['page'];

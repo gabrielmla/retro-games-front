@@ -1,8 +1,14 @@
 import { Injectable } from '@angular/core';
 import { forEach } from '@angular/router/src/utils/collection';
+import { Http, Response } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class GameService {
+
+  private apiUrl: string = 'https://retrogames-api.herokuapp.com/game';
+
+  gamesApi: any = {};
 
   games: any[] = [
     { id: 1,
@@ -45,7 +51,19 @@ export class GameService {
     }
     ];
 
-  constructor() { }
+  constructor(private http: Http) { }
+
+  getData(): any {
+    return this.http.get(this.apiUrl)
+      .map((res: Response) => res.json())
+  }
+
+  getGamesApi(): any {
+    this.getData().subscribe(data => {
+      console.log(data);
+      this.gamesApi = data;
+    });
+  }
 
   getGames() {
     return this.games;
