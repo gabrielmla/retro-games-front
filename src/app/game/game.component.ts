@@ -32,6 +32,7 @@ export class GameComponent implements OnInit, OnDestroy {
       }
     );
     ($('.collapsible') as any).collapsible();
+    console.log(this.gamesApi);
   }
 
   ngOnDestroy() {
