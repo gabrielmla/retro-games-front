@@ -31,7 +31,7 @@ export class GameComponent implements OnInit, OnDestroy {
         this.page = queryParams['page'];
       }
     );
-    ($('.collapsible') as any).collapsible();
+    /*($('.collapsible') as any).collapsible();*/
     console.log(this.gamesApi);
   }
 
