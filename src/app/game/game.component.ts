@@ -40,4 +40,11 @@ export class GameComponent implements OnInit, OnDestroy {
     console.log('delete');
   }
 
+  nextPage() {
+    console.log('next');
+  }
+
+  prevPage() {
+    console.log('prev');
+  }
 }
