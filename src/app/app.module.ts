@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 
 import { MaterializeModule } from 'angular2-materialize';
 import * as $ from 'jquery';
-import 'jqueryui';
+// import 'jqueryui';
 
 import { AppComponent } from './app.component';
 import { GameComponent } from './game/game.component';
