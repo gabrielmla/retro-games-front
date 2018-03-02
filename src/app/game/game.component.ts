@@ -25,14 +25,13 @@ export class GameComponent implements OnInit, OnDestroy {
   ngOnInit() {
     console.log('init');
     this.games = this._gameService.getGames();
-    this.gamesApi = this._gameService.getGamesApi();
     this.subscription = this.route.queryParams.subscribe(
       (queryParams: any) => {
         this.page = queryParams['page'];
       }
     );
-    /*($('.collapsible') as any).collapsible();*/
-    console.log(this.gamesApi);
+    ($('.collapsible') as any).collapsible();
+    console.log(this.games);
   }
 
   ngOnDestroy() {

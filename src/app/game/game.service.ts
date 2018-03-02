@@ -8,7 +8,7 @@ export class GameService {
 
   private apiUrl: string = 'https://retrogames-api.herokuapp.com/game';
 
-  gamesApi: any = {};
+  gamesApi: any = [];
 
   games: any[] = [
     { id: 1,
@@ -61,12 +61,13 @@ export class GameService {
   getGamesApi(): any {
     this.getData().subscribe(data => {
       console.log(data);
-      this.gamesApi = data;
+      this.gamesApi.push(data);
     });
   }
 
   getGames() {
-    return this.games;
+    console.log(this.getData());
+    return this.gamesApi;
    }
 
   getGame(id: number) {
